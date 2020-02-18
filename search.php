@@ -14,10 +14,12 @@
 
                
                
+<!--
                 <h1 class="page-header">
                     Page Heading
                     <small>Secondary Text</small>
                 </h1>
+-->
                
 <?php 
     
@@ -42,12 +44,12 @@
 
                 while($row = mysqli_fetch_assoc($search_result))
                 {
+                    $post_ID = $row['post_id'];
                     $PTitle = $row['post_title'];
                     $PAuthor = $row['post_author'];
                     $PDate = $row['post_date'];
                     $PImage = $row['post_image'];
-                    $PContent = $row['post_content'];
-
+                    $PContent = substr($row['post_content'],0 , 100);
         ?>
 
                         <!-- One Blog Post -->
@@ -59,13 +61,17 @@
                         </p>
                         <p><span class="glyphicon glyphicon-time"></span> Posted on <?php echo $PDate ?></p>
                         <hr>
+                        
+                        <a href="post.php?p_id=<?php echo $post_ID ?>">
                         <img class="img-responsive" src="images/<?php echo $PImage; ?>" alt="">
+                        </a>
+
                         <hr>
                         <p><?php echo $PContent ?></p>
-                        <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+                        <a class="btn btn-primary" href="post.php?p_id=<?php echo $post_ID ?>">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
 
                         <hr>
-
+                      
 <?php
                 } 
             }

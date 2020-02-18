@@ -4,11 +4,11 @@
     <thead>
         <tr>
             <th>ID</th>
+            <th>Image</th>
             <th>User Name</th>
             <th>First Name</th>
             <th>Second Name</th>
             <th>Email</th>
-            <th>Image</th>
             <th>Role</th>
             <th>Register Date</th>
             <th>Admin</th>
@@ -43,13 +43,13 @@
             echo "<tr>";
             
             echo "<td>$user_id</td>";
+            echo "<td><img width='100' src='../images/$user_image' alt='image'></td>";
             echo "<td>$username</td>";
             echo "<td>$user_firstname</td>";
             echo "<td>$user_secondname</td>";
             echo "<td>$user_email</td>";
             echo "<td>$user_role</td>";
             echo "<td>$user_registerdate</td>";
-            echo "<td><img width='100' src='../images/$user_image' alt='image'></td>";
             echo "<td><a href='users.php?source=edit_user&u_id={$user_id}'>Edit</a></td>";
             echo "<td><a href='users.php?admin={$user_id}'>Admin</a></td>";
             echo "<td><a href='users.php?subscriber={$user_id}'>Subscriber</a></td>";

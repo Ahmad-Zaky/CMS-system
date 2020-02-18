@@ -14,10 +14,12 @@
 
                
                
+<!--
                 <h1 class="page-header">
                     Page Heading
                     <small>Secondary Text</small>
                 </h1>
+-->
                
 <?php 
         // get the post selecte from Home page
@@ -46,7 +48,7 @@
                 </p>
                 <p><span class="glyphicon glyphicon-time"></span> Posted on <?php echo $PDate ?></p>
                 <hr>
-                <img width="500" class="img-responsive" src="images/<?php echo $PImage; ?>" alt="">
+                <img width="900" class="img-responsive" src="images/<?php echo $PImage; ?>" alt="">
                 <hr>
                 <p><?php echo $PContent ?></p>
                 <hr>

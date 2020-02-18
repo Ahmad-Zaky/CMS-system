@@ -108,7 +108,7 @@
     
     <div class="form-group">
     <label for="password"> Password  </label>
-        <input value="<?php echo $password; ?>" type="text" class="form-control" name="password">
+        <input value="<?php //echo $password; ?>" type="text" class="form-control" name="password">
     </div>
     
     
