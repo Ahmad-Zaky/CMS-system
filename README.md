@@ -7,5 +7,3 @@ My version of CMS system project of Udemy PHP Basics course.
     - Subscriber password: user
     - Admin username: admin
     - Admin password: admin
-
-    http://ahmedzaky.epizy.com/cms
